@@ -99,7 +99,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 
 #navegacao-achaivos {
     grid-column: 1 / 2;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #000;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -107,12 +107,16 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     justify-self: end;
     height: 40px;
     overflow-y: hidden;
-    background-color: #6C2B2F;
-    border-radius: 20px;
+    /* background-color: #6C2B2F;
+    border-radius: 20px; */
 }
 
 .selected-label {
-    transform: scale(0.8);
+    color: #9e4046;
+}
+
+#navegacao-achaivos:not(.selected-label) {
+    color: #000;
 }
 
 #navegacao-achaivos label {
@@ -124,7 +128,6 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     transition: .1s;
     height: fit-content;
     /* padding: 10px; */
-    color: #fff;
 }
 
 #navegacao-achaivos label + label {
