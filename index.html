@@ -22,9 +22,9 @@
     <section id="sobre-container" class="containers">
         <p class="texto-principal">Sobre o Achai-vos</p>
         <div id="navegacao-achaivos">
-            <label class="navButtons" for="8AchaivosBtn">8ºAchai-vos</label>
-            <label class="navButtons" for="9AchaivosBtn">9ºAchai-vos</label>
-            <label class="navButtons">10ºAchai-vos</label>
+            <label class="navButtons selected-label" for="8AchaivosBtn">2022</label>
+            <label class="navButtons" for="9AchaivosBtn">2023</label>
+            <label class="navButtons">2024</label>
         </div>
         <div class="posts-instagram">
             <div id="insta-8Achaivos">
@@ -139,14 +139,30 @@
 </body>
 
 <script>
-    document.querySelector('.icone-wpp').onclick = function() {
-        window.open('https://api.whatsapp.com/send?phone=5511957774859', "_blank");
-    };
 
-    document.querySelector('.icone-instagram').onclick = function() {
-        window.open('https://www.instagram.com/mjousantosounada?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', "_blank");
-    };
-    
+  document.querySelector('.icone-wpp').onclick = function() {
+      window.open('https://api.whatsapp.com/send?phone=5511957774859', "_blank");
+  };
+
+  document.querySelector('.icone-instagram').onclick = function() {
+      window.open('https://www.instagram.com/mjousantosounada?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', "_blank");
+  };
+
+  document.querySelectorAll("input[name='eventoAchaivos']").forEach (radioBtn => {
+    const radioBtnId = radioBtn.id;
+    const label = document.querySelector(`label[for="${radioBtnId}"]`)
+
+    radioBtn.addEventListener('click', () => {
+      const labels = document.getElementsByClassName("navButtons")
+
+      for (let i = 0; i < labels.length; i++) {
+        labels[i].classList.remove('selected-label');
+      }
+
+      label.classList.add('selected-label')
+    })
+  })
+  
 </script>
 
 </html>
