@@ -112,7 +112,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 }
 
 .selected-label {
-    color: #9e4046;
+    color: #fff;
 }
 
 #navegacao-achaivos:not(.selected-label) {
