@@ -1,6 +1,20 @@
+@font-face {
+    font-family: 'Futura Display';
+    src: url('fonts/FuturaDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sprite Graffiti';
+    src: url('fonts/SpriteGraffiti.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
-    --texto-principal: 'Kumbh Sans', sans-serif;
-    --texto-secundario: 'Istok Web', sans-serif;
+    --texto-principal: 'Sprite Graffiti', sans-serif;
+    --texto-secundario: 'Futura Display', sans-serif;
 }
 
 * {
@@ -11,16 +25,40 @@
 }
 
 body {
-    background-color: #D5D5D2;
+    /* background-color: #D5D5D2; */
+    /* background-image: url('Fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
     width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    background-image: url('Fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* ou use 'contain' se preferir */
+    background-position: center;
+    background-attachment: fixed; /* para manter a imagem fixa enquanto rola a página */
+    opacity: 0.9; /* ajuste este valor conforme necessário */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* garante que a imagem fique atrás dos outros elementos */
 }
 
 .botao-inscricao {
-    background-color: #6C2B2F;
+    background-color: #E4BD24;
     width: 342px;
     height: 96px;
     border-radius: 20px;
-    color: #fff;
+    color: #000;
     font-family: var(--texto-secundario);
     font-size: 36px;
     border: none;
@@ -35,6 +73,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 .texto-principal {
     font-family: var(--texto-principal);
     font-size: 64px;
+    color: #FFF;
 }
 
 .containers {
@@ -63,7 +102,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     max-width: 700px;
     max-height: 700px;
     border-radius: 60px;
-    border: 5px solid #6C2B2F;
+    /* border: 5px solid #6C2B2F; */
     align-self: center;
     justify-self: end;
 }
@@ -80,6 +119,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 #home-container p {
     max-width: 500px;
     text-align: center;
+    color: #fff;
 }
 
 /* #sobre-container {
@@ -99,7 +139,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 
 #navegacao-achaivos {
     grid-column: 1 / 2;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #E4BD24;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -112,11 +152,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 }
 
 .selected-label {
-    color: #9e4046;
+    color: #E4BD24;
 }
 
 #navegacao-achaivos:not(.selected-label) {
-    color: #000;
+    color: #fff;
 }
 
 #navegacao-achaivos label {
@@ -160,9 +200,10 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 #sobre-container .sobre-achaivos {
     grid-column: 2 / 3;
     font-family: var(--texto-secundario);
-    font-size: 24px;
+    font-size: 30px;
     max-width: 600px;
     text-align: justify;
+    color: #fff;
 }
 
 #sobre-container button {
@@ -198,15 +239,17 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     grid-column: 1 / 2;
     text-align: center;
     font-family: var(--texto-secundario);
-    font-size: 28px;    
+    font-size: 36px;
+    color: #fff;
 }
 
 #chavePix {
     grid-column: 1 / 2;
     text-align: center;
-    font-family: var(--texto-principal);
+    font-family: var(--texto-secundario);
     text-align: center;
     font-size: 36px;
+    color: #E4BD24;
 }
 
 #qrcodepix {
@@ -235,8 +278,9 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 #copyContato {
     grid-row: 2;
     text-align: center;
-    font-family: var(--texto-principal);
+    font-family: var(--texto-secundario);
     font-size: 36px;
+    color: #FFF;
 }
 
 .botoes-contato {
@@ -274,8 +318,8 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 #faq-container {
     margin: 0 auto;
     margin-top: 140px;
-    background-color: #6C2B2F;
-    color: #FFF;
+    background-color: #E4BD24;
+    color: #000;
 }
 
 .titulo-faq {
@@ -287,7 +331,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 
 .pergunta-faq {
     padding: 20px 0;
-    border-bottom: 3px solid #D5D5D2;
+    border-bottom: 3px solid #000;
 }
 
 .panel-title {
@@ -298,11 +342,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     padding: 10px 10px 0 100px;
     display: block;
     cursor: pointer;
-    font-family: var(--texto-principal);
+    font-family: var(--texto-secundario);
 }
 
 .panel-content {
-    font-size: 24px;
+    font-size: 30px;
     padding: 0px 14px;
     margin: 0 100px;
     height: 0;
@@ -359,7 +403,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #6C2B2F ;
+    background-color: #E4BD24 ;
     top: calc(50% - 25px);
     opacity: .8;
 }
@@ -400,7 +444,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     }
 
     #sobre-container .sobre-achaivos {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #qrcodepix {
@@ -409,7 +453,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     }
 
     #copyDoacao {
-        font-size: 16px;    
+        font-size: 28px;    
     }
     
     #chavePix {
@@ -424,7 +468,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     }
 
     #copyContato {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .titulo-faq {
@@ -476,7 +520,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     }
 
     #copyDoacao {
-        font-size: 20px;    
+        font-size: 28px;    
     }
     
     #chavePix {
@@ -518,7 +562,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     }
 
     #copyDoacao {
-        font-size: 16px;    
+        font-size: 24px;    
     }
     
     #chavePix {
@@ -537,13 +581,13 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 
     #contato-container .botao-inscricao {
         width: 120px;
-        font-size: 14px;
+        font-size: 24px;
     }
 
     #copyContato {
         display: flex;
         word-wrap: break-word;
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .titulo-faq {
