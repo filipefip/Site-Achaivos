@@ -416,6 +416,12 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     right: 2%;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #D5D5D2;
+    }
+}
+
 @media (max-width:1400px) {
 
     .containers {
