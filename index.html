@@ -15,9 +15,11 @@
     <section id="home-container">
         <img src="10-Achai-vos.png" alt="Arte do 8ºAchai-vos">
         <div class="realize-inscricao">
-            <p class="texto-principal">Realize já sua inscrição</p>
-            <button class="botao-inscricao">Inscreva-se</button>
-        </div>        
+            <p class="texto-principal">Entre em contato conosco <br>
+            para realizazr sua pré-inscrição  
+            </p>
+            <button id="botaoInscreverHome" class="botao-inscricao">Contato</button>
+        </div>          
     </section>
     <section id="sobre-container" class="containers">
         <p class="texto-principal">Sobre o Achai-vos</p>
@@ -98,7 +100,7 @@
             </div>
         </div>
         <p class="sobre-achaivos">Achai-vos é o nome dado ao encontro carismático que ocorre anualmente, organizado pelo Ministério Jovem Ou Santos ou nada e o Grupo de Oração Vida Nova, na Paróquia Santa Luzia do Alvorada, neste encontro você canta, dança, pula, grita, come, conversa, aprende, e acima de tudo reza e se encontra verdadeiramente com Deus.</p>
-        <button class="botao-inscricao">Inscreva-se</button>
+        <button class="botao-inscricao">Contato</button>
     </section>
     <section id="doacoes-container" class="containers">
         <p class="texto-principal">Doações</p>
@@ -113,8 +115,9 @@
         <p id="copyContato">Entre em contato conosco por meio de nossas redes ;)</p>
         <div class="botoes-contato">
             <div class="botao-redesocial icone-wpp"><i class="fa-brands fa-whatsapp"></i></div>        
-            <button class="botao-inscricao">Inscreva-se</button>
-            <div class="botao-redesocial icone-instagram"><i class="fa-brands fa-instagram"></i></div>
+            <!-- <button class="botao-inscricao">Inscreva-se</button> -->
+            <div class="botao-redesocial icone-instagram instagram-mj"><i class="fa-brands fa-instagram"></i></div>
+            <div class="botao-redesocial icone-instagram instagram-vidanova"><i class="fa-brands fa-instagram"></i></div>
         </div>
     </section>
     <section id="faq-container">
@@ -200,11 +203,15 @@
 <script>
 
   document.querySelector('.icone-wpp').onclick = function() {
-      window.open('https://api.whatsapp.com/send?phone=5511957774859', "_blank");
+      window.open('https://api.whatsapp.com/send?phone=5511980672457', "_blank");
   };
 
-  document.querySelector('.icone-instagram').onclick = function() {
+  document.querySelector('.instagram-mj').onclick = function() {
       window.open('https://www.instagram.com/mjousantosounada?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', "_blank");
+  };
+
+  document.querySelector('.instagram-vidanova').onclick = function() {
+      window.open('https://www.instagram.com/vidanova.rcc/', "_blank");
   };
 
   document.querySelectorAll("input[name='eventoAchaivos']").forEach (radioBtn => {
@@ -221,6 +228,21 @@
       label.classList.add('selected-label')
     })
   })
+
+  let botoesContato = document.getElementsByClassName('botao-inscricao')
+
+  botoesContato = Array.from(botoesContato);
+
+  botoesContato.forEach(botao => {
+    botao.addEventListener('click', function() {
+      console.log("aaq")
+      document.getElementById('contato-container').scrollIntoView({ behavior: 'smooth' });
+    });
+  })
+
+  // document.getElementById('botaoInscreverHome').addEventListener('click', function() {
+  //   document.getElementById('contato-container').scrollIntoView({ behavior: 'smooth' });
+  // });
   
 </script>
 
