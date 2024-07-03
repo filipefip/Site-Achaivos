@@ -28,19 +28,15 @@ html {
     scroll-behavior: smooth;
 }
 
-body, html {
-    /* background-image: url('Fundo.png');
+/*body, html {
+     background-image: url('Fundo.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
     position: relative;
-    margin: 0;
-    padding: 0;     */
-    margin: 0;
-    padding: 0;
-}
+} */
 
 .background {
     position: fixed;
@@ -229,7 +225,8 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     padding: 20px;
 } */
 
-#doacoes-container .texto-principal {
+
+#doacoes-container .texto-principal, #camisetas-container .texto-principal {
     grid-column: 1 / 3;
     text-align: center;
 }
@@ -240,9 +237,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     justify-self: flex-end;
     justify-content: space-evenly;
     max-width: 600px;
+    align-items: center;
+    overflow-y: hidden;
 }
 
-#copyDoacao {
+#copyDoacao, .copyContainer{
     grid-column: 1 / 2;
     text-align: center;
     font-family: var(--texto-secundario);
@@ -250,7 +249,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     color: #fff;
 }
 
-#chavePix {
+.copyContainer {
+    font-family: var(--texto-principal);
+}
+
+#chavePix, .copyInfoContainer {
     grid-column: 1 / 2;
     text-align: center;
     font-family: var(--texto-secundario);
@@ -465,11 +468,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         max-height: 200px;
     }
 
-    #copyDoacao {
+    #copyDoacao, .copyContainer{
         font-size: 28px;    
     }
     
-    #chavePix {
+    #chavePix, .copyInfoContainer {
         font-size: 24px;
     }
 
@@ -532,11 +535,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         justify-self: center;
     }
 
-    #copyDoacao {
+    #copyDoacao, .copyContainer{
         font-size: 28px;    
     }
     
-    #chavePix {
+    #chavePix, .copyInfoContainer {
         font-size: 28px;
     }
 
@@ -574,11 +577,11 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         font-size: 24px;
     }
 
-    #copyDoacao {
+    #copyDoacao, .copyContainer{
         font-size: 24px;    
     }
     
-    #chavePix {
+    #chavePix, .copyInfoContainer {
         font-size: 24px;
     }
 
