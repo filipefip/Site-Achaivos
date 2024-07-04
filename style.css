@@ -178,12 +178,13 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
 }
 
 .posts-instagram {
+    display: flex;
+    flex-direction: column;
     grid-column: 1 / 2;
-    grid-row: span 2;
+    grid-row: span 1;
     border-radius: 60px;
     max-width: 600px;
-    max-height: 600px;
-    height: 100% / 2;
+    height: 100%;
     width: 100%;
     justify-self: end;
 }
@@ -200,6 +201,18 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     display: none;
 }
 
+.imgUnderPosts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.imgUnderPosts img {
+    width: 280px;
+    height: 280px;
+}
+
 #sobre-container .sobre-achaivos {
     grid-column: 2 / 3;
     font-family: var(--texto-secundario);
@@ -213,6 +226,10 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     grid-column: 2 / 3;
     align-self: center;
     justify-self: start;
+}
+
+.camisetasImg {
+    transform: rotate(90deg);
 }
 
 /* #doacoes-container {
@@ -463,9 +480,19 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         font-size: 20px;
     }
 
-    #qrcodepix {
+    .imgUnderPosts img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #qrcodepix  {
         max-width: 200px;
         max-height: 200px;
+    }
+
+    .camisetasImg {
+        max-width: 888px;
+        max-height: 500px;
     }
 
     #copyDoacao, .copyContainer{
@@ -525,6 +552,10 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         grid-column: 1;
     }
 
+    .imgUnderPosts img {
+        display: none;
+    }
+
     #sobre-container button {
         grid-column: 1;
         align-self: center;
@@ -548,6 +579,14 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         max-width: 350px;
         max-height: 350px;
         justify-self: center;
+    }
+
+    .camisetasImg {
+        grid-column: 1;
+        width: 300px;
+        height: 500px;
+        justify-self: center;
+        align-self: self-start;
     }
 
     .botao-redesocial {
@@ -585,7 +624,7 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
         font-size: 24px;
     }
 
-    #qrcodepix {
+    #qrcodepix, .camisetasImg {
         grid-column: 1;
         max-width: 200px;
         max-height: 200px;
