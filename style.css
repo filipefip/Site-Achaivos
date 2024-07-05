@@ -242,6 +242,10 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     padding: 20px;
 } */
 
+#doacoes-container {
+    margin-top: 0;
+}
+
 
 #doacoes-container .texto-principal, #camisetas-container .texto-principal {
     grid-column: 1 / 3;
