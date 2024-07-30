@@ -18,10 +18,10 @@
       <section id="home-container">
           <img src="10-Achai-vos.png" alt="Arte do 8ºAchai-vos">
           <div class="realize-inscricao">
-              <p class="texto-principal">Entre em contato conosco <br>
-              para realizazr sua pré-inscrição  
+              <p class="texto-principal">Confira as principais fotos <br>
+              desse e dos últimos Achai-vos 🔥🔥
               </p>
-              <button id="botaoInscreverHome" class="botao-inscricao">Contato</button>
+              <button id="botaoInscreverHome" class="botao-inscricao botao-fotos">Fotos</button>
           </div>          
       </section>
       <section id="sobre-container" class="containers">
@@ -141,7 +141,7 @@
             
             Deus espera por você!
           </p>
-          <button class="botao-inscricao">Contato</button>
+          <!-- <button class="botao-inscricao">Contato</button> -->
       </section>
       <section id="camisetas-container" class="containers">
         <p class="texto-principal">Camisetas</p>
@@ -170,7 +170,7 @@
               <div class="botao-redesocial icone-instagram instagram-vidanova"><i class="fa-brands fa-instagram"></i></div>
           </div>
       </section>
-      <section id="faq-container">
+      <!-- <section id="faq-container">
           <p class="titulo-faq">Perguntas Frequentes</p>
           <div class="pergunta-faq">
               <input id="pergunta1" type="checkbox" class="panel">
@@ -215,7 +215,7 @@
               <li>Coração aberto ❤😊</li>
             </ul>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="pergunta-faq">
           <input id="pergunta6" type="checkbox" class="panel">
           <div class="mais">+</div>
@@ -224,7 +224,7 @@
             Todos os jovens que...
           </div>
         </div> -->
-        <div class="pergunta-faq">
+        <!-- <div class="pergunta-faq">
           <input id="pergunta7" type="checkbox" class="panel">
           <div class="mais">+</div>
           <label for="pergunta7" class="panel-title">Quais refeições estão inclusas na inscrição?</label>
@@ -243,8 +243,9 @@
             pessoas melhores em seu dia a dia buscando da Santidade.
           </div>
         </div>
-      </section>
+      </section> -->
     </div>
+    <footer id="rodape"></footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -286,8 +287,17 @@
 
   botoesContato.forEach(botao => {
     botao.addEventListener('click', function() {
-      console.log("aaq")
       document.getElementById('contato-container').scrollIntoView({ behavior: 'smooth' });
+    });
+  })
+
+  let botoesFotos = document.getElementsByClassName('botao-fotos')
+
+  botoesFotos = Array.from(botoesFotos);
+
+  botoesFotos.forEach(botao => {
+    botao.addEventListener('click', function() {
+      document.getElementById('sobre-container').scrollIntoView({ behavior: 'smooth' });
     });
   })
 

@@ -89,6 +89,13 @@ button:hover, .navButtons:hover, .icone-wpp:hover, .icone-instagram:hover {
     padding: 20px;
 }
 
+#rodape {
+    width: 100%;
+    height: 30px;
+    background-color: #E4BD24;
+    margin-top: 30px;
+}
+
 #home-container {    
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
